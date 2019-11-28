@@ -1,0 +1,10 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.DS_Store
+_book
+_bookdown_files
+.Rapp.history
+Applied_statistics_R.pdf
+/Applied_statistics

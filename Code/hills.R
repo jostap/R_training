@@ -1,0 +1,20 @@
+`hills` <-
+structure(list(distance = c(2.5, 6, 6, 7.5, 8, 8, 16, 6, 5, 6, 
+28, 5, 9.5, 6, 4.5, 10, 14, 3, 4.5, 5.5, 3, 3.5, 6, 2, 3, 4, 
+6, 5, 6.5, 5, 10, 6, 18, 4.5, 20), climb = c(650, 2500, 900, 
+800, 3070, 2866, 7500, 800, 800, 650, 2100, 2000, 2200, 500, 
+1500, 3000, 2200, 350, 1000, 600, 300, 1500, 2200, 900, 600, 
+2000, 800, 950, 1750, 500, 4400, 600, 5200, 850, 5000), time = c(16.083, 
+48.35, 33.65, 45.6, 62.267, 73.217, 204.617, 36.367, 29.75, 39.75, 
+192.667, 43.05, 65, 44.133, 26.933, 72.25, 98.417, 78.65, 17.417, 
+32.567, 15.95, 27.9, 47.633, 17.933, 18.683, 26.217, 34.433, 
+28.567, 50.5, 20.95, 85.583, 32.383, 170.25, 28.1, 159.833)), .Names = c("distance", 
+"climb", "time"), class = "data.frame", row.names = c("Greenmantle", 
+"Carnethy", "Craig Dunain", "Ben Rha", "Ben Lomond", "Goatfell", 
+"Bens of Jura", "Cairnpapple", "Scolty", "Traprain", "Lairig Ghru", 
+"Dollar", "Lomonds", "Cairn Table", "Eildon Two", "Cairngorm", 
+"Seven Hills", "Knock Hill", "Black Hill", "Creag Beag", "Kildcon Hill", 
+"Meall Ant-Suidhe", "Half Ben Nevis", "Cow Hill", "N Berwick Law", 
+"Creag Dubh", "Burnswark", "Largo Law", "Criffel", "Acmony", 
+"Ben Nevis", "Knockfarrel", "Two Breweries", "Cockleroi", "Moffat Chase"
+))
