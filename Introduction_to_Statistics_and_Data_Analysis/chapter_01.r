@@ -1,4 +1,4 @@
-setwd("C:/Users/a-jostap/Documents/R_Projects/Introduction_to_Statistics_and_Data_Analysis")
+setwd("C:/Users/a-jostap/Documents/Statistical_Analysis/R/Introduction_to_Statistics_and_Data_Analysis")
 
 ## From Apendix A
 library(MASS)
