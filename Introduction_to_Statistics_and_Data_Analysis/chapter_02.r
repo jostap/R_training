@@ -8,3 +8,13 @@ barplot(table(branch))
 barplot(table(branch)/length(branch))
 
 pie(table(sv))
+
+# EDCF for continuous variables
+plot.ecdf(time)
+
+pizza$DeliveryTime <- ifelse(pizza$time <= 10, '[0; 10]', 
+                             ifelse(pizza$time <= 15, '(10; 15]',
+                             ifelse(pizza$time <= 40, '(15; 40]', '.')))
+
+
+plot.ecdf(DeliveryTime)
