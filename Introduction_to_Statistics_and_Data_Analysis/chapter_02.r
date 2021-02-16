@@ -25,6 +25,7 @@ pizza$DeliveryTime <- ifelse(pizza$time <= 10, '[0; 10]',
 
 DeliveryTime
 
+library(MASS)
 truehist(time, breaks=c(0,10,15,20,25,30,35,40,45,50,55))
 
 
@@ -44,7 +45,7 @@ pie(table(sv))
 hist(time)
 hist(time, freq = F)
 
-library(MASS)
+
 truehist(time)
 
 # Kernel Density Plots
