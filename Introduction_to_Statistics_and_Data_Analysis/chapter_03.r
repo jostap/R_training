@@ -28,3 +28,18 @@ w$time
 par(mar= c(5, 5, 2, 2))
 qqplot(z$time, w$time, xlim=c(10,60),ylim=c(10,60), xlab = 'Delivery time from Mario', ylab = 'Delivery time from Salvatore')
 lines(c(10,60),c(10,60),type="l",col="blue",lwd=2)
+
+# Measures of Dispersion
+var(time)
+air <- c(30,25,12,45,50,52,38,39,45,33)
+mean(air)
+median(air)
+sd(air)
+scale(air)
+
+# Box plot
+boxplot(time, range=1.5)
+boxplot(temperature, range=1.5)
+boxplot(weather, range=1.5)
+
+
