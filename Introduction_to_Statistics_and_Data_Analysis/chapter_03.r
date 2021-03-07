@@ -2,6 +2,7 @@ weather <- c(22, 24, 21, 22, 25, 26, 25, 24, 23, 25, 25, 26, 27, 25, 26,
              25, 26, 27, 27, 28, 29, 29, 29, 28, 30, 29, 30, 31, 30, 28, 29)
 weather
 mean(weather)
+summary(weather)
 
 
 weighted.mean(c(22.5,27.5,32.5),c(12/31,18/31,1/31))
@@ -34,12 +35,22 @@ var(time)
 air <- c(30,25,12,45,50,52,38,39,45,33)
 mean(air)
 median(air)
+var(air)
 sd(air)
 scale(air)
 
 # Box plot
+boxplot(time)
 boxplot(time, range=1.5)
 boxplot(temperature, range=1.5)
 boxplot(weather, range=1.5)
+
+# Lorenz Curve
+library(ineq)
+x <- c(20, 20, 20, 20, 20)
+plot(Lc(x))
+
+plot(Lc(time))
+
 
 
