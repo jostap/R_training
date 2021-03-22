@@ -22,3 +22,8 @@ assocstats(xtabs(~Class+Rating))
 library(vcd)
 Cmax = sqrt((min(c(3,4))-1)/min(c(3,4)))
 assocstats(xtabs(~Class+Rating))$cont/Cmax
+
+# Association between ordinal and continuous variables
+tweets <- c(25,11800,99,1934,199,2539,4334,952,3245,2468)
+followers <- c(7194,43400000,324000,2330000,39000,189000,639000,688000,2690000,110000)
+plot(tweets, followers)
