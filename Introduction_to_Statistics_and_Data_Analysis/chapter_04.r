@@ -39,3 +39,36 @@ assocstats(xtabs(~Class+Rating))$cont/Cmax
 tweets <- c(25,11800,99,1934,199,2539,4334,952,3245,2468)
 followers <- c(7194,43400000,324000,2330000,39000,189000,639000,688000,2690000,110000)
 plot(tweets, followers)
+
+
+# Correlation Coefficient
+decathlon <- read.csv('decathlon.csv', row.names=1)
+attach(decathlon)
+
+cor(X.100m, X.Long.jump, method = 'pearson')
+cor(X.100m, X.Long.jump, method = 'spearman')
+
+cor(tweets, followers, method = 'pearson')
+cor(tweets, followers, method = 'spearman')
+
+
+# Measures Using Discordant and Concordant Pairs
+library(ryouready)
+ex <- matrix(c(7,11,26,10,15,31),ncol=3,byrow=T)
+ord.gamma(ex)
+ord.tau(ex)
+
+ord.gamma(table(Vaccination, Persons))
+ord.tau(table(Vaccination, Persons))
+
+ord.gamma(table(Class,Rating))
+ord.tau(table(Class,Rating))
+
+ord.gamma(table(tweets, followers))
+ord.tau(table(tweets, followers))
+
+#Visualization of Variables from Different Scales
+boxplot(time~branch)
+plot.ecdf(time[branch=='East'])
+plot.ecdf(time[branch=='West'], add=TRUE)
+plot.ecdf(time[branch=='Centre'], add=TRUE)
