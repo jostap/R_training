@@ -6,13 +6,25 @@ Rating <- c(rep('1=poor',10),rep('2=fair',33),rep('3=good',15),rep('4=very good'
 addmargins(table(Class,Rating))
 addmargins(prop.table(table(Class,Rating)))
 
+Vaccination <- c(rep('Vaccinated', 100), rep('Not vaccinated', 100))
+Persons <- c(rep('Not affected', 90), rep('Affected', 10), rep('Not affected', 40), rep('Affected', 60))
+
+addmargins(table(Vaccination, Persons))
+addmargins(prop.table(table(Vaccination, Persons)))
+
 library(lattice)
 barchart(table(Class,Rating),horizontal=FALSE,stack=FALSE)
 barchart(table(Class,Rating),horizontal=FALSE,stack=TRUE)
 
+barchart(table(Vaccination, Persons),horizontal=FALSE,stack=FALSE)
+barchart(table(Vaccination, Persons),horizontal=FALSE,stack=TRUE)
+
 # Pearson's X^2 Statistic
 chisq.test(table(Class,Rating))$expected
 chisq.test(table(Class,Rating))$statistic
+
+chisq.test(table(Vaccination, Persons))$expected
+chisq.test(table(Vaccination, Persons))$statistic
 
 # Cramer's V Statistic
 library(vcd)
