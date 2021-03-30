@@ -134,16 +134,36 @@ TravelClass <- c(rep('1 Class', 135), rep('2 Class', 160), rep('3 Class', 541), 
 addmargins(table(RescueStatus, TravelClass))
 addmargins(prop.table(table(RescueStatus, TravelClass)))
 
+# Pearson's X^2 Statistic
+chisq.test(table(RescueStatus, TravelClass))$expected
+chisq.test(table(RescueStatus, TravelClass))$statistic
+
+# Cramer's V Statistic
+library(vcd)
+assocstats(xtabs(~RescueStatus+TravelClass))
+
+# Contingency Coefficient C
+library(vcd)
+Cmax = sqrt((min(c(2,4))-1)/min(c(2,4)))
+assocstats(xtabs(~RescueStatus+TravelClass))$cont/Cmax
+
 ################
 # Exercise 4.5 #
 ################
 
 # c)
 
-#MISSING (where is it?)
-
 temp <- c(-6,-5,2,4,7,15,17,19,13,9,4,0,10,10,14,17,22,24,26,27,22,19,14,12,1,0,5,9,14,20,23,24,21,14,9,4)
 ho <- c(91,89,76,52,42,36,37,39,26,27,68,92,13,21,42,64,79,81,86,92,36,23,13,41,23,82,40,45,39,43,50,95,64,78,9,12)
+Z <- c(rep('Davos',12),rep('Polenca',12),rep('Basel',12))
+plot(temp, ho)
+
+cor(temp, ho, method = 'pearson')
+cor(temp, ho, method = 'spearman')
+
+cor(temp[Z=='Davos'], ho[Z=='Davos'])
+cor(temp[Z=='Basel'], ho[Z=='Basel'])
+cor(temp[Z=='Polenca'], ho[Z=='Polenca'])
 
 #################
 # Exercise 4.8  #
