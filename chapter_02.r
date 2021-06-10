@@ -23,6 +23,7 @@ pizza$DeliveryTime <- ifelse(pizza$time <= 10, '[0; 10]',
                                     '.'))))))))))
 
 
+attach(pizza)
 DeliveryTime
 
 library(MASS)
